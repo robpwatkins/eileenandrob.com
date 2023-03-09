@@ -1,3 +1,17 @@
+/**** base ****/
+
 body {
-    background-color: lightpink;
+    background-color: #737373;
+    font-family: 'Lora' serif;
+    color: #F9D0C1;
+    letter-spacing: 1px;
+}
+
+/**** grid ****/
+
+.full-width {
+    margin: 0 auto;
+    text-align:center;
+
+
 }
