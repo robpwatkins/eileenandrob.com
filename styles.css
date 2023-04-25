@@ -1,4 +1,8 @@
 /**** global styles ****/
+* {
+  margin: 0;
+  padding: 0
+}
 
 body {
     background-color: #737373;
@@ -9,26 +13,63 @@ body {
 }
 
 /**** header styles ****/
-
-header h1{
+header h1 {
+    margin: 2.5rem 0;
     font-family: 'Playball', cursive;
-    font-size: 44px;
+    font-size: 4rem;
     text-align: center;
+    text-shadow: 2px 2px #535353;
 }
+
 header h2 {
     font-size: 20px;
     text-align: center;
 }
 
-header nav {
-    width: 1000px;
-    float: center;
-    text-align: right;
+.container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.header-image {
+    position: relative;
+    width: 100%;
+    height: 21%;
+    background-image: url(./img/treeeees.webp);
+    background-position-y: -71px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #737373;
+    opacity: .7;
+}
+
+.everything {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+nav {
+    margin: 1rem 0;
 }
 
 nav ul li {
     display: inline-block;
-    padding: 30px 10px 30px 0;
+    padding: 30px;
+}
+
+nav ul li:hover::after {
+    content: '';
+    display: block;
+    margin-top: .25rem;
+    border: 1px solid #444444;
 }
 
 nav ul li a { 
@@ -36,5 +77,5 @@ nav ul li a {
     color: black;
     font-size: 14px;
     text-align: center;
-    padding-left: 60px;
+    /* padding-left: 60px; */
 }
