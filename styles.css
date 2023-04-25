@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #737373;
+    background-color: rgb(255 253 230);
     font-family: 'Lora', serif;
     color: #F9D0C1;
     font-size: 13px;
@@ -24,6 +24,7 @@ header h1 {
 header h2 {
     font-size: 20px;
     text-align: center;
+    text-shadow: 2px 2px #535353;
 }
 
 .container {
@@ -35,9 +36,9 @@ header h2 {
 .header-image {
     position: relative;
     width: 100%;
-    height: 21%;
-    background-image: url(./img/treeeees.webp);
-    background-position-y: -71px;
+    height: 31%;
+    background-image: url(./img/thanks_robots2.png);
+    background-position-y: -30px;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -47,7 +48,7 @@ header h2 {
     width: 100%;
     height: 100%;
     background-color: #737373;
-    opacity: .7;
+    opacity: .5;
 }
 
 .everything {
@@ -57,25 +58,27 @@ header h2 {
 }
 
 nav {
-    margin: 1rem 0;
+    margin: 2.5rem 0;
 }
 
 nav ul li {
     display: inline-block;
     padding: 30px;
+    text-shadow: 1px 1px #535353;
 }
 
 nav ul li:hover::after {
     content: '';
     display: block;
     margin-top: .25rem;
-    border: 1px solid #444444;
+    border: 1px solid rgb(255 253 230);
+    box-shadow: 1px 1px #535353;
 }
 
 nav ul li a { 
     text-decoration: none;
-    color: black;
-    font-size: 14px;
+    color: rgb(255 253 230);
+    font-size: 15px;
     text-align: center;
     /* padding-left: 60px; */
 }
