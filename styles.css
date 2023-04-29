@@ -65,7 +65,7 @@ header .overlay {
 .everything {
     position: relative;
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 0 1rem;
     z-index: 1;
 }
 
@@ -141,13 +141,13 @@ main .overlay {
 
     .toggle-nav {
         position: absolute;
-        top: 15px;
+        top: 1.5rem;
         display: flex;
         width: 25px;
         height: 25px;
         justify-content: center;
         align-items: center;
-        padding-left: 1rem;
+        padding-left: 1.5rem;
         color: var(--pink);
         text-shadow: 1px 1px var(--darkgrey);
         z-index: 1;
