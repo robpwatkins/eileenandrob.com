@@ -148,33 +148,32 @@ main .overlay {
         justify-content: center;
         align-items: center;
         padding-left: 1.5rem;
-        color: var(--pink);
-        text-shadow: 1px 1px var(--darkgrey);
-        z-index: 1;
-    }
-
-    .open-nav {
         font-size: 25px;
+        color: var(--darkgrey);
+        z-index: 1;
     }
 
     .close-nav {
         display: none;
-        font-size: 20px;
     }
 
-    ul {
+    nav ul {
         position: absolute;
         display: none;
         flex-direction: column;
-        justify-content: space-around;
         top: 0;
         width: 100%;
         height: 100vh;
+        padding-top: 2rem;
         background-color: var(--white);
-        opacity: .9;
+    }
+
+    nav ul li {
+        padding: 2.5rem 0;
     }
 
     nav ul li a {
+        font-size: 20px;
         color: var(--darkgrey);
         text-shadow: none;
     }
