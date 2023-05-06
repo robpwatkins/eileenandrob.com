@@ -149,7 +149,8 @@ main .overlay {
         align-items: center;
         padding-left: 1.5rem;
         font-size: 25px;
-        color: var(--darkgrey);
+        color: var(--pink);
+        text-shadow: 1px 1px var(--darkgrey);
         z-index: 1;
     }
 
