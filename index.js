@@ -1,6 +1,7 @@
 let navOpen = false;
 const openNav = document.querySelector('.open-nav');
 const closeNav = document.querySelector('.close-nav');
+const gallery = document.querySelector('.gallery');
 
 document.querySelector('.toggle-nav').addEventListener('click', () => {
   const ul = document.querySelector('ul');
@@ -17,3 +18,15 @@ document.querySelector('.toggle-nav').addEventListener('click', () => {
     navOpen = true;
   }
 });
+
+const renderGallery = async () => {
+  let count = 1;
+  while (count < 12) {
+    const img = document.createElement('img');
+    img.src = `./gallery/${count}.jpg`;
+    gallery.appendChild(img);
+    count++;
+  }
+};
+
+if (gallery) renderGallery();

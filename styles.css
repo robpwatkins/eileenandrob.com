@@ -9,10 +9,12 @@
     --pink: #F9D0C1;
     --grey: #737373;
     --darkgrey: #535353;
+    /* --foggy: #a29e86ba; */
+    --foggy: #867f578f;
 }
 
 body {
-    background-color: var(--white);
+    background-color: var(--foggy);
     font-family: 'Lora', serif;
     color: var(--pink);
     font-size: 13px;
@@ -35,7 +37,6 @@ header h1 {
 header h2 {
     font-size: 20px;
     text-align: center;
-    text-shadow: 2px 2px var(--darkgrey);
 }
 
 header h1, header h2 {
@@ -45,7 +46,7 @@ header h1, header h2 {
 .header-image {
     position: relative;
     width: 100%;
-    background-image: url(./img/thanks_robots2.png);
+    background-image: url(./img/thanks_robots2.webp);
     background-position: center 38%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -120,6 +121,10 @@ main .overlay {
     opacity: .3;
 }
 
+.gallery img {
+    max-width: 500px;
+}
+
 @media (min-width: 768px) {
     .toggle-nav {
         display: none;
@@ -171,6 +176,10 @@ main .overlay {
 
     nav ul li {
         padding: 2.5rem 0;
+    }
+
+    nav ul li::after {
+        display: none;
     }
 
     nav ul li a {
