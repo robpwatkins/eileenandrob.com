@@ -2,6 +2,8 @@ let navOpen = false;
 const openNav = document.querySelector('.open-nav');
 const closeNav = document.querySelector('.close-nav');
 const gallery = document.querySelector('.gallery');
+const thumbnails = document.querySelector('.thumbnails');
+const carouselModal = document.querySelector('.carousel .modal');
 
 document.querySelector('.toggle-nav').addEventListener('click', () => {
   const ul = document.querySelector('ul');
@@ -20,11 +22,32 @@ document.querySelector('.toggle-nav').addEventListener('click', () => {
 });
 
 const renderGallery = async () => {
+  const handleThumbnailClick = (e) => {
+    carouselModal.classList.add('active');
+    document.querySelector('body').style.overflow = 'hidden';
+    const [imgNumber] = e.target.classList;
+    const carouselImg = document.querySelector(`.carousel .modal .${imgNumber}`);
+    carouselImg.style.display = 'block';
+  }
+
   let count = 1;
-  while (count < 12) {
+  
+  while (count < 67) {
     const img = document.createElement('img');
+    img.className = `img-${count}`;
     img.src = `./gallery/${count}.jpg`;
-    gallery.appendChild(img);
+
+    const imgContainer = document.createElement('div');
+    imgContainer.className = 'img-container';
+    imgContainer.onclick = handleThumbnailClick;
+
+    img.onload = () => {
+      imgContainer.appendChild(img);
+    }
+    
+    thumbnails.appendChild(imgContainer);
+    carouselModal.appendChild(img.cloneNode());
+
     count++;
   }
 };
