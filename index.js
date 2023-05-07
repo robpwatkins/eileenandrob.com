@@ -21,13 +21,19 @@ document.querySelector('.toggle-nav').addEventListener('click', () => {
   }
 });
 
+let activeImg;
+
 const renderGallery = async () => {
   const handleThumbnailClick = (e) => {
-    carouselModal.classList.add('active');
     document.querySelector('body').style.overflow = 'hidden';
-    const [imgNumber] = e.target.classList;
-    const carouselImg = document.querySelector(`.carousel .modal .${imgNumber}`);
+
+    carouselModal.style.top = `${window.pageYOffset}px`;
+    carouselModal.classList.add('active');
+
+    const [currentImg] = e.target.classList;
+    const carouselImg = document.querySelector(`.carousel .modal .${currentImg}`);
     carouselImg.style.display = 'block';
+    activeImg = carouselImg;
   }
 
   let count = 1;
@@ -52,4 +58,13 @@ const renderGallery = async () => {
   }
 };
 
-if (gallery) renderGallery();
+if (gallery) {
+  renderGallery();
+  carouselModal.addEventListener('click', (e) => {
+    if (carouselModal.classList.contains('active') && e.target.tagName !== 'IMG') {
+      activeImg.style.display = 'none';
+      carouselModal.classList.remove('active');
+      document.querySelector('body').style.overflow = 'scroll';
+    }
+  })
+}
