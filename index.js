@@ -54,12 +54,14 @@ const renderGallery = async () => {
     modalImgContainer.classList.add('modal-img-container');
     const modalImg = img.cloneNode();
 
-    modalImg.onload = () => {
-      modalImgContainer.appendChild(modalImg);
-      modalImgContainer.insertAdjacentHTML('beforeend', `
-        <div class="controls"></div>
-      `);
-    }
+    modalImgContainer.insertAdjacentHTML('beforeend', `
+      <div class="controls">
+        <div class="move move-left"><</div>
+        <div class="move move-right">></div>
+      </div>
+    `);
+
+    modalImg.onload = () => modalImgContainer.insertAdjacentElement('afterbegin', modalImg);
     carouselModal.appendChild(modalImgContainer);
 
     count++;
@@ -69,10 +71,21 @@ const renderGallery = async () => {
 if (gallery) {
   renderGallery();
   carouselModal.addEventListener('click', (e) => {
-    if (carouselModal.classList.contains('active') && e.target.tagName !== 'IMG') {
-      activeImg.style.display = 'none';
+    if (
+      carouselModal.classList.contains('active')
+      && !e.target.classList.contains('controls')
+      && !e.target.classList.contains('move')
+    ) {
+      activeImg.parentElement.style.display = 'none';
       carouselModal.classList.remove('active');
       document.querySelector('body').style.overflow = 'scroll';
     }
-  })
+  });
+
+  document.querySelectorAll('.move').forEach(el => el.addEventListener('click', (e) => {
+    if (e.target.classList.contains('move-left')) {
+      const [imgNumber] = activeImg.classList;
+      console.log('imgNumber: ', imgNumber);
+    }
+  }));
 }

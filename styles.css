@@ -171,7 +171,7 @@ main .overlay {
     display: none;
     justify-content: center;
     align-items: center;
-    max-width: 50%;;
+    max-width: 50%;
 }
 
 .carousel img {
@@ -181,6 +181,18 @@ main .overlay {
 
 .carousel .controls {
     position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.controls .move {
+    margin: 1rem;
+    font-size: 4rem;
+    text-shadow: 2px 2px var(--darkgrey);
+    cursor: pointer;
 }
 
 @media (min-width: 768px) {
