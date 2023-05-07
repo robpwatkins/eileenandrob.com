@@ -166,9 +166,21 @@ main .overlay {
     z-index: 1;
 }
 
-.carousel img {
+.carousel .modal-img-container {
+    position: relative;
     display: none;
-    max-width: 50%;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;;
+}
+
+.carousel img {
+    position: inherit;
+    width: 100%;
+}
+
+.carousel .controls {
+    position: absolute;
 }
 
 @media (min-width: 768px) {

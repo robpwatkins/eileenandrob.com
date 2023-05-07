@@ -32,7 +32,7 @@ const renderGallery = async () => {
 
     const [currentImg] = e.target.classList;
     const carouselImg = document.querySelector(`.carousel .modal .${currentImg}`);
-    carouselImg.style.display = 'block';
+    carouselImg.parentElement.style.display = 'flex';
     activeImg = carouselImg;
   }
 
@@ -47,12 +47,20 @@ const renderGallery = async () => {
     imgContainer.className = 'img-container';
     imgContainer.onclick = handleThumbnailClick;
 
-    img.onload = () => {
-      imgContainer.appendChild(img);
-    }
-    
+    img.onload = () => imgContainer.appendChild(img);
     thumbnails.appendChild(imgContainer);
-    carouselModal.appendChild(img.cloneNode());
+
+    const modalImgContainer = document.createElement('div');
+    modalImgContainer.classList.add('modal-img-container');
+    const modalImg = img.cloneNode();
+
+    modalImg.onload = () => {
+      modalImgContainer.appendChild(modalImg);
+      modalImgContainer.insertAdjacentHTML('beforeend', `
+        <div class="controls"></div>
+      `);
+    }
+    carouselModal.appendChild(modalImgContainer);
 
     count++;
   }
