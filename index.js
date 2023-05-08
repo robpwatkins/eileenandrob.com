@@ -21,7 +21,7 @@ document.querySelector('.toggle-nav').addEventListener('click', () => {
   }
 });
 
-let activeImg;
+let activeImgContainer;
 
 const renderGallery = async () => {
   const handleThumbnailClick = (e) => {
@@ -32,8 +32,8 @@ const renderGallery = async () => {
 
     const [currentImg] = e.target.classList;
     const carouselImg = document.querySelector(`.carousel .modal .${currentImg}`);
-    carouselImg.parentElement.style.display = 'flex';
-    activeImg = carouselImg;
+    activeImgContainer = carouselImg.parentElement;
+    activeImgContainer.style.display = 'flex';
   }
 
   let count = 1;
@@ -70,13 +70,14 @@ const renderGallery = async () => {
 
 if (gallery) {
   renderGallery();
+  
   carouselModal.addEventListener('click', (e) => {
     if (
       carouselModal.classList.contains('active')
       && !e.target.classList.contains('controls')
       && !e.target.classList.contains('move')
     ) {
-      activeImg.parentElement.style.display = 'none';
+      activeImgContainer.style.display = 'none';
       carouselModal.classList.remove('active');
       document.querySelector('body').style.overflow = 'scroll';
     }
@@ -86,11 +87,11 @@ if (gallery) {
     let sibling;
     
     if (e.target.classList.contains('move-left')) {
-      sibling = activeImg.parentElement.previousElementSibling;
-    } else sibling = activeImg.parentElement.nextElementSibling;
+      sibling = activeImgContainer.previousElementSibling;
+    } else sibling = activeImgContainer.nextElementSibling;
 
-    activeImg.parentElement.style.display = 'none';
+    activeImgContainer.style.display = 'none';
     sibling.style.display = 'flex';
-    activeImg = sibling.querySelector('img');
+    activeImgContainer = sibling;
   }));
 }
