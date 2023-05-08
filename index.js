@@ -83,9 +83,14 @@ if (gallery) {
   });
 
   document.querySelectorAll('.move').forEach(el => el.addEventListener('click', (e) => {
+    let sibling;
+    
     if (e.target.classList.contains('move-left')) {
-      const [imgNumber] = activeImg.classList;
-      console.log('imgNumber: ', imgNumber);
-    }
+      sibling = activeImg.parentElement.previousElementSibling;
+    } else sibling = activeImg.parentElement.nextElementSibling;
+
+    activeImg.parentElement.style.display = 'none';
+    sibling.style.display = 'flex';
+    activeImg = sibling.querySelector('img');
   }));
 }
