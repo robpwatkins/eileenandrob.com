@@ -41,7 +41,7 @@ const renderGallery = async () => {
   while (count < 67) {
     const img = document.createElement('img');
     img.className = `img-${count}`;
-    img.src = `./gallery/${count}.jpg`;
+    img.src = `./img/gallery/${count}.webp`;
 
     const imgContainer = document.createElement('div');
     imgContainer.className = 'img-container';

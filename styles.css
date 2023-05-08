@@ -124,7 +124,7 @@ main .overlay {
     position: absolute;
     top: 0;
     background-color: var(--grey);
-    opacity: .3;
+    opacity: .2;
 }
 
 .thumbnails {
