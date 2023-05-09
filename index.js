@@ -38,7 +38,7 @@ const renderGallery = async () => {
 
   let count = 1;
   
-  while (count < 67) {
+  while (count < 75) {
     const img = document.createElement('img');
     img.className = `img-${count}`;
     img.src = `./img/gallery/${count}.webp`;
