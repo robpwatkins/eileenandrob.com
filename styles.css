@@ -10,7 +10,8 @@
     --grey: #737373;
     --darkgrey: #535353;
     /* --foggy: #a29e86ba; */
-    --foggy: #867f578f;
+    /* --foggy: #867f578f; */
+    --darkgreen: #3e4b48e6;
 }
 
 body {
@@ -19,7 +20,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--foggy);
+    background-color: var(--darkgreen);
     font-family: 'Lora', serif;
     color: var(--pink);
     font-size: 13px;
