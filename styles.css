@@ -1,7 +1,7 @@
 /**** global styles ****/
 * {
-  margin: 0;
-  padding: 0
+    margin: 0;
+    padding: 0
 }
 
 :root {
@@ -23,10 +23,12 @@ body {
     background-color: var(--darkgreen);
     font-family: 'Lora', serif;
     color: var(--pink);
-    font-size: 16px; /* es */
+    font-size: 16px;
+    /* es */
     letter-spacing: 1px;
     text-align: center;
-    width: 100%; /* es */
+    width: 100%;
+    /* es */
 }
 
 /**** header styles ****/
@@ -48,7 +50,8 @@ header h2 {
     text-align: center;
 }
 
-header h1, header h2 {
+header h1,
+header h2 {
     padding: 0 1rem;
 }
 
@@ -102,12 +105,11 @@ nav ul li:hover::after {
     opacity: 1;
 }
 
-nav ul li a { 
+nav ul li a {
     text-decoration: none;
     color: var(--white);
     font-size: 15px;
     text-align: center;
-    /* padding-left: 60px; */
 }
 
 .img-and-overlay {
@@ -129,6 +131,7 @@ main .overlay {
     background-color: var(--grey);
     opacity: .2;
 }
+
 /* eileen - start here, girl */
 
 .about .words {
@@ -137,10 +140,13 @@ main .overlay {
     align-items: center;
     flex-wrap: row wrap;
 }
+
 .words p {
-    width: 55%;
+    width: 80%;
     padding: 80px 0;
-    line-height: 2em;
+    font-size: .8em;
+    line-height: 1.75em;
+    color: rgb(255 254 242);
 }
 
 
@@ -154,18 +160,22 @@ main .overlay {
 .wedding-info {
     display: flex;
     flex-direction: column;
-    padding-bottom: 6em;;
+    padding-bottom: 6em;
 }
 
-.wedding-info h2 , h3{
-    width: 55%;
-    border-top: 1px solid var(--pink);
-    font-size: 1.6em;;
+.wedding-info h2,
+h3 {
+    width: 85%;
+    border-top: 1px solid rgb(131, 131, 131);
+    font-size: 1.2em;
     padding: .75em 0;
 }
+
 .wedding-info p {
-    padding-bottom: 2em;
-    line-height: 1.45;
+    padding-bottom: 1.5em;
+    line-height: 1.75;
+    font-size: .8em;
+    color: rgb(255 254 242);
 }
 
 
@@ -261,7 +271,8 @@ Media Queries
         margin: 0;
     }
 
-    header h1, header h2 {
+    header h1,
+    header h2 {
         padding: 1.5rem;
     }
 
@@ -316,4 +327,58 @@ Media Queries
     .carousel .modal-img-container {
         max-width: 95vw;
     }
+}
+
+/*======================================================
+Desktop
+======================================================*/
+
+@media (min-width: 1200px) {
+
+    /** homepage **/
+
+    .about .words {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: row wrap;
+    }
+
+    .words p {
+        width: 55%;
+        padding: 80px 0;
+        line-height: 2em;
+        color: rgb(255 254 242);
+    }
+
+    .about .wedding-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: row wrap;
+    }
+
+    .wedding-info {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 6em;
+        ;
+    }
+
+    .wedding-info h2,
+    h3 {
+        width: 55%;
+        border-top: 1px solid rgb(131, 131, 131);
+        font-size: 1.6em;
+        ;
+        padding: .75em 0;
+    }
+
+    .wedding-info p {
+        padding-bottom: 2em;
+        line-height: 1.45;
+        color: rgb(255 254 242);
+    }
+
+    /** insert other edits here **/
 }
