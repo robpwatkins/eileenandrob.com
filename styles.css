@@ -23,8 +23,10 @@ body {
     background-color: var(--darkgreen);
     font-family: 'Lora', serif;
     color: var(--pink);
-    font-size: 13px;
+    font-size: 16px; /* es */
     letter-spacing: 1px;
+    text-align: center;
+    width: 100%; /* es */
 }
 
 /**** header styles ****/
@@ -127,6 +129,49 @@ main .overlay {
     background-color: var(--grey);
     opacity: .2;
 }
+/* eileen - start here, girl */
+
+.about .words {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: row wrap;
+}
+.words p {
+    width: 55%;
+    padding: 80px 0;
+    line-height: 2em;
+}
+
+
+.about .wedding-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: row wrap;
+}
+
+.wedding-info {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 6em;;
+}
+
+.wedding-info h2 , h3{
+    width: 55%;
+    border-top: 1px solid var(--pink);
+    font-size: 1.6em;;
+    padding: .75em 0;
+}
+.wedding-info p {
+    padding-bottom: 2em;
+    line-height: 1.45;
+}
+
+
+/*============================================================
+Photos
+============================================================*/
 
 .thumbnails {
     display: flex;
@@ -196,6 +241,10 @@ main .overlay {
     text-shadow: 2px 2px var(--darkgrey);
     cursor: pointer;
 }
+
+/*======================================================
+Media Queries
+======================================================*/
 
 @media (min-width: 768px) {
     .toggle-nav {
