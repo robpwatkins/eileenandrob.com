@@ -199,7 +199,6 @@ Photos
 }
 
 .thumbnails img {
-    position: absolute;
     min-width: 100%;
     max-width: 100%;
     min-height: 100%;
