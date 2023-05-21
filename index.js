@@ -1,9 +1,20 @@
 let navOpen = false;
+const navItems = document.querySelectorAll('ul li');
 const openNav = document.querySelector('.open-nav');
 const closeNav = document.querySelector('.close-nav');
 const gallery = document.querySelector('.gallery');
 const thumbnails = document.querySelector('.thumbnails');
 const carouselModal = document.querySelector('.carousel .modal');
+
+const { pathname } = window.location;
+
+window.addEventListener('DOMContentLoaded', () => {
+  const currentNav = pathname === '/'
+    ? navItems[0]
+    : Array.from(navItems).find(item => pathname.includes(item.innerText.toLowerCase()));
+
+  currentNav.classList.add('active');
+})
 
 document.querySelector('.toggle-nav').addEventListener('click', () => {
   const ul = document.querySelector('ul');
