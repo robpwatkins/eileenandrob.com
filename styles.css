@@ -273,7 +273,6 @@ Photos
 .registry button {
     height: 100%;
     width: 150px;
-    padding: 1rem;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -282,11 +281,11 @@ Photos
 }
 
 .target button {
-    background-image: url("https://cdn.honeyfund.com/_assets/images/partners/registries/target.png");
+    background-image: url("https://png2.cleanpng.com/sh/f1e49ae5abc95b3cf371a2f3e6f70377/L0KzQYm3VMI6N5ppiZH0aYP2gLBuTfxwb5Cyitd9YXnvPcXokvdmfF5ohAR5b4LkhLr2jr1ibKdqiuZyc3nxd368gfU2bZc5S6s9NHO7SXA6VMA1OWU3TaMAMkWzQYm7U8U3OGg5RuJ3Zx==/kisspng-logo-retail-target-corporation-advertising-5ae5ef43944c89.3404142515250184356074.png");
 }
 
 .amazon button {
-    background-image: url("https://cdn.honeyfund.com/_assets/images/partners/registries/amazon.png");
+    background-image: url("https://cdn.freebiesupply.com/images/large/2x/amazon-logo-transparent.png");
 }
 
 .honeyfund button {
