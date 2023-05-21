@@ -12,11 +12,13 @@ document.querySelector('.toggle-nav').addEventListener('click', () => {
     closeNav.style.display = 'none';
     openNav.style.display = 'block';
     ul.style.display = 'none';
+    document.querySelector('body').style.overflow = 'scroll';
     navOpen = false;
   } else {
     openNav.style.display = 'none';
     closeNav.style.display = 'block';
     ul.style.display = 'flex';
+    document.querySelector('body').style.overflow = 'hidden';
     navOpen = true;
   }
 });
