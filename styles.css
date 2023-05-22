@@ -16,10 +16,7 @@
 
 body {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh;
     background-color: var(--darkgreen);
     font-family: 'Lora', serif;
     color: var(--pink);
@@ -196,6 +193,10 @@ h3 {
 Photos
 ============================================================*/
 
+.gallery {
+    padding-bottom: 3rem;
+}
+
 .thumbnails {
     display: flex;
     justify-content: center;
@@ -319,7 +320,10 @@ Photos
 }
 
 footer {
-    margin-bottom: 1rem;
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    font-size: .85rem;
 }
 
 footer a {
