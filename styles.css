@@ -318,6 +318,14 @@ Photos
     color: var(--white);
 }
 
+footer {
+    margin-bottom: 1rem;
+}
+
+footer a {
+    color: var(--white);
+}
+
 /*======================================================
 Media Queries
 ======================================================*/
