@@ -1,4 +1,5 @@
 let navOpen = false;
+const nav = document.querySelector('nav');
 const navItems = document.querySelectorAll('ul li');
 const openNav = document.querySelector('.open-nav');
 const closeNav = document.querySelector('.close-nav');
@@ -23,12 +24,14 @@ document.querySelector('.toggle-nav').addEventListener('click', () => {
     closeNav.style.display = 'none';
     openNav.style.display = 'block';
     ul.style.display = 'none';
+    nav.style.backgroundColor = 'var(--darkgreen)';
     document.querySelector('body').style.overflow = 'scroll';
     navOpen = false;
   } else {
     openNav.style.display = 'none';
     closeNav.style.display = 'block';
     ul.style.display = 'flex';
+    nav.style.backgroundColor = 'unset';
     document.querySelector('body').style.overflow = 'hidden';
     navOpen = true;
   }
