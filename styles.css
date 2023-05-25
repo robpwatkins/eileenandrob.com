@@ -21,11 +21,10 @@ body {
     font-family: 'Lora', serif;
     color: var(--pink);
     font-size: 16px;
-    /* es */
     letter-spacing: 1px;
     text-align: center;
     width: 100%;
-    /* es */
+    
 }
 
 /**** header styles ****/
@@ -152,7 +151,7 @@ main .overlay {
 }
 
 .words p {
-    width: 80%;
+    width: 95%;
     padding: 85px 0;
     font-size: 1em;
     line-height: 1.75em;
