@@ -151,9 +151,9 @@ main .overlay {
 }
 
 .words p {
-    width: 95%;
+    width: 100%;
     padding: 85px 0;
-    font-size: 1em;
+    font-size: .85em;
     line-height: 1.75em;
     color: rgb(255 254 242);
 }
