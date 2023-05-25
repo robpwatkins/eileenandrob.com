@@ -1,4 +1,6 @@
 let navOpen = false;
+const body = document.querySelector('body');
+const nav = document.querySelector('nav');
 const navItems = document.querySelectorAll('ul li');
 const openNav = document.querySelector('.open-nav');
 const closeNav = document.querySelector('.close-nav');
@@ -23,13 +25,15 @@ document.querySelector('.toggle-nav').addEventListener('click', () => {
     closeNav.style.display = 'none';
     openNav.style.display = 'block';
     ul.style.display = 'none';
-    document.querySelector('body').style.overflow = 'scroll';
+    nav.style.backgroundColor = 'var(--darkgreen)';
+    body.style.overflow = 'scroll';
     navOpen = false;
   } else {
     openNav.style.display = 'none';
     closeNav.style.display = 'block';
     ul.style.display = 'flex';
-    document.querySelector('body').style.overflow = 'hidden';
+    nav.style.backgroundColor = 'unset';
+    body.style.overflow = 'hidden';
     navOpen = true;
   }
 });
