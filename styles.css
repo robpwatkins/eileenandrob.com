@@ -117,6 +117,19 @@ nav ul li a {
     text-align: center;
 }
 
+nav .registry-item {
+    position: relative;
+}
+
+nav .square-arrow {
+    position: absolute;
+    right: .6rem;
+    bottom: .6rem;
+    font-size: .85rem;
+    color: var(--white);
+    opacity: 0;
+}
+
 .home {
     padding: 1.5rem;
 }
@@ -400,6 +413,11 @@ Media Queries
         font-size: 20px;
         color: var(--white);
         text-shadow: none;
+    }
+
+    nav .square-arrow {
+        opacity: 1 !important;
+        bottom: .70rem;
     }
 
     .everything {
