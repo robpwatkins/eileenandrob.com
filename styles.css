@@ -186,11 +186,16 @@ main .overlay {
 }
 
 .wedding-info h2,
-h3 {
-    width: 85%;
+.wedding-info h3,
+.travel h2 {
     border-top: 1px solid rgb(131, 131, 131);
     font-size: 1.2em;
     padding: .75em 0;
+}
+
+.wedding-info h2,
+.wedding-info h3 {
+    width: 85%;
 }
 
 .wedding-info p {
@@ -277,53 +282,29 @@ Photos
     cursor: pointer;
 }
 
-.registry {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-}
-
-.registry a {
-    width: 250px;
-    height: 125px;
-    margin: 1rem;
-    background-color: #eee;
-    border-radius: 2px;
-}
-
-.registry button {
-    height: 100%;
-    width: 150px;
-    padding: 1rem;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-color: #eee;
-    border: none;
-    cursor: pointer;
-}
-
-.target button {
-    background-image: url("https://cdn.honeyfund.com/_assets/images/partners/registries/target.png");
-}
-
-.amazon button {
-    background-image: url("https://cdn.honeyfund.com/_assets/images/partners/registries/amazon.png");
-}
-
-.honeyfund button {
-    background-image: url("https://d2i1tcfj6z4y0e.cloudfront.net/assets/img/logo/logo-registered-primary-70.svg");
-}
+/*============================================================
+Travel
+============================================================*/
 
 .travel, .rsvp {
     margin-top: 1.5rem;
 }
 
-.registry-iframe {
-    width: 90vw;
-    height: 3523px;
+.travel {
+    width: 50vw;
+    margin: 2rem auto;
+}
+
+.travel h2 {
+    color: var(--white);
+}
+
+.travel p {
+    margin: 0 0 1rem;
+}
+
+.travel b {
+    color: var(--white);
 }
 
 .rsvp .instructions {
@@ -466,12 +447,16 @@ Desktop
     }
 
     .wedding-info h2,
-    h3 {
-        width: 55%;
+    .wedding-info h3,
+    .travel h2 {
         border-top: 1px solid rgb(131, 131, 131);
         font-size: 1.6em;
-        ;
         padding: .75em 0;
+    }
+
+    .wedding-info h2,
+    .wedding-info h3 {
+        width: 55%;
     }
 
     .wedding-info p {
