@@ -117,7 +117,8 @@ nav ul li a {
     text-align: center;
 }
 
-nav .registry-item {
+nav .registry-item,
+nav .rsvp-item {
     position: relative;
 }
 
@@ -295,7 +296,7 @@ Travel
     margin: 2rem auto;
 }
 
-.travel h2 {
+.travel a {
     color: var(--white);
 }
 

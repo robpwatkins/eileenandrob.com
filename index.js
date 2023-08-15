@@ -5,6 +5,7 @@ const navItems = document.querySelectorAll('ul li');
 const openNav = document.querySelector('.open-nav');
 const closeNav = document.querySelector('.close-nav');
 const registryItem = document.querySelector('.registry-item');
+const rsvpItem = document.querySelector('.rsvp-item');
 const squareArrow = document.querySelector('.square-arrow');
 const gallery = document.querySelector('.gallery');
 const thumbnails = document.querySelector('.thumbnails');
@@ -39,13 +40,13 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  registryItem.addEventListener('mouseenter', (e) => {
-    squareArrow.style.opacity = 1;
-  });
+  [registryItem, rsvpItem].forEach(item => item.addEventListener('mouseenter', (e) => {
+    e.target.querySelector('.square-arrow').style.opacity = 1;
+  }));
 
-  registryItem.addEventListener('mouseleave', (e) => {
-    squareArrow.style.opacity = 0;
-  });
+  [registryItem, rsvpItem].forEach(item => item.addEventListener('mouseleave', (e) => {
+    e.target.querySelector('.square-arrow').style.opacity = 0;
+  }));
 
   let activeImgContainer;
 
