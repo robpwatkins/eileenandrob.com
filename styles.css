@@ -287,13 +287,10 @@ Photos
 Travel
 ============================================================*/
 
-.travel, .rsvp {
-    margin-top: 1.5rem;
-}
-
 .travel {
     width: 50vw;
-    margin: 2rem auto;
+    margin: 2rem auto 0;
+    padding-bottom: 6rem;
 }
 
 .travel a {
@@ -301,7 +298,7 @@ Travel
 }
 
 .travel p {
-    margin: 0 0 1rem;
+    margin: 0 0 2rem;
 }
 
 .travel b {
@@ -464,6 +461,10 @@ Desktop
         padding-bottom: 2em;
         line-height: 1.45;
         color: rgb(255 254 242);
+    }
+
+    .all-events {
+        font-size: 1.25em !important;
     }
 
     /** insert other edits here **/
